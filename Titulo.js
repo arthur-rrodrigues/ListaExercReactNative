@@ -1,19 +1,12 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
+import ListaExercicios from './pages/ListaExercicios';
 
-export default function Titulo({ nome }) {
-  return <Text style={styles.titulo}>Exercício: {nome}</Text>;
+export default function App() {
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content" />
+      <ListaExercicios />
+    </SafeAreaView>
+  );
 }
-
-const styles = StyleSheet.create({
-  titulo: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#2c3e50',
-    marginVertical: 15,
-    textAlign: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#bdc3c7',
-    paddingBottom: 5,
-  },
-});
